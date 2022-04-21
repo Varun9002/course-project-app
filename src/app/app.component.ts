@@ -7,5 +7,4 @@ import { ShoppingListService } from './shopping-list/shopping-list.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  recipeActive = true;
 }
