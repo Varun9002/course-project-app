@@ -1,10 +1,15 @@
 <nav class="navbar navbar-inverse">
     <div class="conatainer-fluid">
         <div class="navbar-header">
+            <button type="button" class="navbar-toggle" [ngClass]="{collapsed:collapse==true}" (click)="onCollapse()">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>                         
+              </button>
             <a class="navbar-brand" href="#">RECIPE BOOK</a>
         </div>
     </div>
-    <div class="collapse navbar-collapse">
+    <div class="collapse navbar-collapse" [ngClass]="{show:collapse==true}">
         <ul class="nav navbar-nav">
             <!-- <li routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"><a routerLink="recipes">Recipes</a></li> -->
             <li routerLinkActive="active"><a routerLink="recipes"*ngIf="isAuthenticated">Recipes</a></li>

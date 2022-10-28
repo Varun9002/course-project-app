@@ -12,6 +12,7 @@ import { DataStorageService } from '../shared/data-storage.service';
 export class HeaderComponent implements OnInit, OnDestroy {
   private userSub!: Subscription;
   isAuthenticated = false;
+  collapse:boolean = false;
   constructor(
     private dataStorageService: DataStorageService,
     private authService: AuthService,
@@ -30,7 +31,12 @@ export class HeaderComponent implements OnInit, OnDestroy {
   onLogout() {
     this.authService.logout();
   }
+
+  onCollapse() {
+    this.collapse = !this.collapse;
+  }
   ngOnDestroy() {
     this.userSub.unsubscribe;
   }
+
 }
