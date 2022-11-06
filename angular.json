@@ -103,5 +103,7 @@
       }
     }
   },
-  "defaultProject": "course-project-app"
+  "cli": {
+    "analytics": false
+  }
 }
